@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "squares",
+  "short_name": "squares",
+  "version": "com.chairsoft.squares",
+  "description": "Hello World sample application that responds to the deviceready event.",
+  "author": "chairsoft",
+  "icons": [],
+  "start_url": "index.html"
+}
