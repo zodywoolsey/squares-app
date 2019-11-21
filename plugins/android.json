@@ -8,34 +8,31 @@
   },
   "installed_plugins": {
     "cordova-plugin-battery-status": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    },
-    "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-geolocation": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-globalization": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-media-capture": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-vibration": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-admob": {
       "PACKAGE_NAME": "com.chairsoft.squares"
@@ -43,7 +40,7 @@
   },
   "dependent_plugins": {
     "cordova-plugin-file": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-connectivity-monitor": {
       "PACKAGE_NAME": "com.chairsoft.squares"

@@ -13,10 +13,6 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
-              "count": 1
-            },
-            {
               "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
               "count": 1
             },
@@ -76,7 +72,7 @@
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-              "count": 3
+              "count": 2
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
@@ -113,12 +109,7 @@
               "count": 1
             }
           ],
-          "application": [
-            {
-              "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"android.support.v4.content.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/provider_paths\" /></provider>",
-              "count": 1
-            }
-          ],
+          "application": [],
           "/manifest": [
             {
               "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
@@ -131,37 +122,34 @@
   },
   "installed_plugins": {
     "cordova-plugin-battery-status": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
-    },
-    "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-file": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-geolocation": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-globalization": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-media-capture": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-plugin-vibration": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+      "PACKAGE_NAME": "com.chairsoft.squares"
     },
     "cordova-connectivity-monitor": {
       "PACKAGE_NAME": "com.chairsoft.squares"
@@ -181,38 +169,6 @@
       "pluginId": "cordova-plugin-battery-status",
       "clobbers": [
         "navigator.battery"
-      ]
-    },
-    {
-      "id": "cordova-plugin-camera.Camera",
-      "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
-      "pluginId": "cordova-plugin-camera",
-      "clobbers": [
-        "Camera"
-      ]
-    },
-    {
-      "id": "cordova-plugin-camera.CameraPopoverOptions",
-      "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
-      "pluginId": "cordova-plugin-camera",
-      "clobbers": [
-        "CameraPopoverOptions"
-      ]
-    },
-    {
-      "id": "cordova-plugin-camera.camera",
-      "file": "plugins/cordova-plugin-camera/www/Camera.js",
-      "pluginId": "cordova-plugin-camera",
-      "clobbers": [
-        "navigator.camera"
-      ]
-    },
-    {
-      "id": "cordova-plugin-camera.CameraPopoverHandle",
-      "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
-      "pluginId": "cordova-plugin-camera",
-      "clobbers": [
-        "CameraPopoverHandle"
       ]
     },
     {
@@ -565,7 +521,6 @@
   ],
   "plugin_metadata": {
     "cordova-plugin-battery-status": "1.2.5",
-    "cordova-plugin-camera": "2.4.1",
     "cordova-plugin-device": "1.1.7",
     "cordova-plugin-dialogs": "1.3.4",
     "cordova-plugin-file": "4.3.3",

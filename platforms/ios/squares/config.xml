@@ -22,9 +22,6 @@
     <feature name="Battery">
         <param name="ios-package" value="CDVBattery" />
     </feature>
-    <feature name="Camera">
-        <param name="ios-package" value="CDVCamera" />
-    </feature>
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
@@ -61,9 +58,9 @@
     </feature>
     <name>squares</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        App version of the squares game.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
+    <author email="zodywoolsey@gmail.com" href="http://github.com/zodywoolsey">
         chairsoft
     </author>
     <content src="index.html" />
@@ -115,6 +112,5 @@
     <preference name="PageLength" value="0" />
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
-    <preference name="CameraUsesGeolocation" value="false" />
     <preference name="android-minSdkVersion" value="19" />
 </widget>

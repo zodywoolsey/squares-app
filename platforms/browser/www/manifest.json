@@ -4,7 +4,7 @@
   "name": "squares",
   "short_name": "squares",
   "version": "com.chairsoft.squares",
-  "description": "Hello World sample application that responds to the deviceready event.",
+  "description": "App version of the squares game.",
   "author": "chairsoft",
   "icons": [],
   "start_url": "index.html"

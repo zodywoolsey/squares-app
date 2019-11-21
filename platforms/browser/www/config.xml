@@ -2,9 +2,9 @@
 <widget id="com.chairsoft.squares" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>squares</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        App version of the squares game.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
+    <author email="zodywoolsey@gmail.com" href="http://github.com/zodywoolsey">
         chairsoft
     </author>
     <content src="index.html" />

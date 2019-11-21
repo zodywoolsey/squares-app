@@ -10,9 +10,6 @@
     "cordova-plugin-battery-status": {
       "PACKAGE_NAME": "com.chairsoft.squares"
     },
-    "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.chairsoft.squares"
-    },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.chairsoft.squares"
     },
