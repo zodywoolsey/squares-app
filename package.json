@@ -28,7 +28,9 @@
       "cordova-admob": {}
     },
     "platforms": [
-      "browser"
+      "browser",
+      "android",
+      "ios"
     ]
   },
   "dependencies": {
