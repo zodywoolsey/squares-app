@@ -1,24 +1,4 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
 
 <head>
@@ -26,19 +6,7 @@
     <meta name="format-detection" content="telephone=yes" />
     <meta name="msapplication-tap-highlight" content="yes" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1,width=device-width" />
-    <!-- <script src="js/admob.js"></script> -->
-    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
-    <!-- Good default declaration:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-        * Enable inline JS: add 'unsafe-inline' to default-src
-        * Enable eval(): add 'unsafe-eval' to default-src
-    * Create your own at http://cspisawesome.com
-    -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-
     <title>squares</title>
 
     <style>
@@ -70,9 +38,11 @@
             background-color: #000;
         }
         html{
-            user-select: none;
+            user-select: none !important;
             color: #fff;
             font-family: sans-serif;
+            max-height: 100vh;
+            overflow: hidden !important;
         }
         .button{
             padding: 2vh;
@@ -89,7 +59,7 @@
             background-color: #000;
             width: 100vw;
             overflow: hidden;
-            height: 100vh;
+            height: 90vh;
             padding: 25% 0px 0px 0px;
             margin: 0px auto;
             transition: left .5s;
@@ -136,21 +106,49 @@
                     <div style="user-select:text !important;">Code: <div id="code" style="max-width: 80vw; word-wrap: break-word; width: 80vw;"></div></div>
                 </div>
                 <div>
-                    <div class="button" onclick="reStart(5,5);menuToggle()" >Easy (5,5)</div>
+                    <div class="button" id="easy" >Easy (5,5)</div>
                 </div>
                 <hr class="buttonDivider" />
                 <div>
-                    <div class="button" onclick="reStart(10,10);menuToggle()">Normal (10,10)</div>
+                    <div class="button" id="normal" >Normal (10,10)</div>
                 </div>
                 <hr class="buttonDivider" />
                 <div>
-                    <div class="button" onclick="reStart(15,15);menuToggle()">Hard (15,15)</div>
+                    <div class="button" id="hard" >Hard (15,15)</div>
                 </div>
                 <hr class="buttonDivider" />
                 <div>
-                    <div class="button" onclick="cursorChange(); menuToggle(); reStart(dimension[0],dimension[1])">Change the Cursor</div>
+                    <div class="button" id="changeCursor" >Change the Cursor</div>
                 </div>
+                <div style="text-align: center;">Current cursor:</div>
+                <div>
+                    <svg>
+                        <!-- Cross -->
+                        <line x1='40%' y1='50%' x2='60%' y2='50%' style="stroke-width: 5; stroke: red; transition: all 1s; filter: blur(0px); " hidden />
+                        <line x1='40%' y1='50%' x2='60%' y2='50%' style="stroke-width: 5; stroke: red; transition: all 1s; filter: blur(0px); " hidden />
+                        
+                        <!-- Horizontal -->
+                        <line x1='40%' y1='50%' x2='60%' y2='50%' style="stroke-width: 5; stroke: red; transition: all 1s; filter: blur(0px); " hidden />
+                        <line x1='40%' y1='50%' x2='60%' y2='50%' style="stroke-width: 5; stroke: red; transition: all 1s; filter: blur(0px); " hidden />
+                        
+                        <!-- Vertical -->
+                        <line x1='40%' y1='50%' x2='60%' y2='50%' style="stroke-width: 5; stroke: red; transition: all 1s; filter: blur(0px); " hidden />
+                        <line x1='40%' y1='50%' x2='60%' y2='50%' style="stroke-width: 5; stroke: red; transition: all 1s; filter: blur(0px); " hidden />
+                        
+                        <!-- Diagonal Right -->
+                        <line x1='40%' y1='50%' x2='60%' y2='50%' style="stroke-width: 5; stroke: red; transition: all 1s; filter: blur(0px); " hidden />
+                        <line x1='40%' y1='50%' x2='60%' y2='50%' style="stroke-width: 5; stroke: red; transition: all 1s; filter: blur(0px); " hidden />
+                        
+                        <!-- Diagonal Left -->
+                        <line x1='40%' y1='50%' x2='60%' y2='50%' style="stroke-width: 5; stroke: red; transition: all 1s; filter: blur(0px); " hidden />
+                        <line x1='40%' y1='50%' x2='60%' y2='50%' style="stroke-width: 5; stroke: red; transition: all 1s; filter: blur(0px); " hidden />
+                        
+                        <!-- X -->
+                        <line x1='40%' y1='50%' x2='60%' y2='50%' style="stroke-width: 5; stroke: red; transition: all 1s; filter: blur(0px); " hidden />
+                        <line x1='40%' y1='50%' x2='60%' y2='50%' style="stroke-width: 5; stroke: red; transition: all 1s; filter: blur(0px); " hidden />
 
+                    </svg>
+                </div>
             </div>
         </div>
         <div style="margin-left: auto; margin-right: auto; padding: 0px; width: min-content;">
@@ -172,9 +170,13 @@
         let gameContainer;
         let cursor = "cross";
         let cursors = ['cross','horizontal','vertical','diagonalright','diagonalleft','x'];
+
         document.addEventListener('mousedown',()=>{isClick = true;})
         document.addEventListener('mouseup',()=>{isClick = false;})
         document.addEventListener('touchend',()=>{isClick = false;})
+        document.querySelector('.buttons').addEventListener('touchmove',(e)=>{e.preventDefault()});
+        document.querySelector('body').addEventListener('touchmove',(e)=>{e.preventDefault()});
+        window.addEventListener('touchmove', (e)=>{e.preventDefault()});
         function init(dimx,dimy){
             
             level = 0;
@@ -375,10 +377,25 @@
                 tmpCursor[0].classList.toggle('cursor');
             }
         }
-        document.querySelector('#codeGen').addEventListener('click', ()=>{document.querySelector('#code').innerText = (patternParser())});
-        document.querySelector('#toggleEditMode').addEventListener('click', ()=>{toggleEditMode()} );
-        document.querySelector('#enterCode').addEventListener('click', ()=>{patternParser(document.querySelector('#inputCode').value)} );
-        document.querySelector('#sideMenuButton').addEventListener('click', menuToggle);
+        // document.querySelector('#codeGen').addEventListener('click', ()=>{document.querySelector('#code').innerText = (patternParser())});
+        // document.querySelector('#toggleEditMode').addEventListener('click', ()=>{toggleEditMode()} );
+        // document.querySelector('#enterCode').addEventListener('click', ()=>{patternParser(document.querySelector('#inputCode').value)} );
+
+        document.querySelector('#sideMenuButton').addEventListener('touchstart', (e)=>{ e.target.setAttribute('touched','true') });
+        document.querySelector('#sideMenuButton').addEventListener('touchend', (e)=>{ if(e.target.hasAttribute('touched')){menuToggle(e)} });
+
+        document.querySelector('#changeCursor').addEventListener('touchstart', (e)=>{ e.target.setAttribute('touched','true') });
+        document.querySelector('#changeCursor').addEventListener('touchend', (e)=>{ if(e.target.hasAttribute('touched')){ cursorChange(); reStart(dimension[0],dimension[1] )} });
+
+        document.querySelector('#easy').addEventListener('touchstart', (e)=>{ e.target.setAttribute('touched','true') });
+        document.querySelector('#easy').addEventListener('touchend', (e)=>{ if(e.target.hasAttribute('touched')){reStart(5,5); menuToggle(); e.target.removeAttribute('touched')}  });
+
+        document.querySelector('#normal').addEventListener('touchstart', (e)=>{ e.target.setAttribute('touched','true') });
+        document.querySelector('#normal').addEventListener('touchend', (e)=>{ if(e.target.hasAttribute('touched')){reStart(10,10); menuToggle(); e.target.removeAttribute('touched')}  });
+
+        document.querySelector('#hard').addEventListener('touchstart', (e)=>{ e.target.setAttribute('touched','true') });
+        document.querySelector('#hard').addEventListener('touchend', (e)=>{ if(e.target.hasAttribute('touched')){reStart(15,15); menuToggle(); e.target.removeAttribute('touched')}  });
+
         
         init(10,10);
         reStart(10,10);

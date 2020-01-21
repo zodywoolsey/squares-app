@@ -1,39 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.chairsoft.squares" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <feature name="Battery">
-        <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
-    </feature>
-    <feature name="Camera">
-        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
-    </feature>
-    <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.device.Device" />
-    </feature>
-    <feature name="Notification">
-        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
-    </feature>
-    <feature name="File">
-        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+<widget id="com.chairsoft.squares" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
-    </feature>
-    <allow-navigation href="cdvfile:*" />
-    <feature name="Geolocation">
-        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
-    </feature>
-    <feature name="Globalization">
-        <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
-    </feature>
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
-    </feature>
-    <feature name="Capture">
-        <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
-    </feature>
-    <feature name="NetworkStatus">
-        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
-    </feature>
-    <feature name="Vibration">
-        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
     </feature>
     <feature name="connectivity">
         <param name="android-package" value="com.appfeel.cordova.connectivity.Connectivity" />
@@ -43,9 +12,9 @@
     </feature>
     <name>squares</name>
     <description>
-        App version of the squares game.
+        A game about patterns of squares!
     </description>
-    <author email="zodywoolsey@gmail.com" href="http://github.com/zodywoolsey">
+    <author email="zodywoolsey@gmail.com" href="https://github.com/zodywoolsey">
         chairsoft
     </author>
     <content src="index.html" />
@@ -56,14 +25,6 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
-    <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
-    <icon density="hdpi" src="www/res/icon/android/drawable-hdpi-icon.png" />
-    <icon density="xhdpi" src="www/res/icon/android/drawable-xhdpi-icon.png" />
-    <icon density="xxhdpi" src="www/res/icon/android/drawable-xxhdpi-icon.png" />
-    <icon density="xxxhdpi" src="www/res/icon/android/drawable-xxxhdpi-icon.png" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="android-minSdkVersion" value="19" />
 </widget>
